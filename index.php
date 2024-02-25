@@ -4,8 +4,8 @@
     require_once __DIR__.'/classes/Product.php';
 
 
-    $CatCategory = new Category('Cat');
-    $DogCategory = new Category('Dog');
+    $CatCategory = new Category('🐈');
+    $DogCategory = new Category('🐕');
 
     $ProductTest = new Product(
         'Product Test', 
@@ -54,7 +54,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div src="" class="card-image-top">
-                                <?php echo $ProductTest->image;?>
+                                Immagine
                             </div>
 
                             <h3>
@@ -69,7 +69,7 @@
                                     Availability: <?php echo $ProductTest->availability;?>
                                 </li>
                                 <li>
-                                   Category: <?php echo $ProductTest->category;?>
+                                   Category: <?php echo $ProductTest->category->name;?>
                                 </li>
                                 <li>
                                     Sku: <?php echo $ProductTest->sku;?>
