@@ -2,6 +2,9 @@
 
     require_once __DIR__.'/classes/Category.php';
     require_once __DIR__.'/classes/Product.php';
+    require_once __DIR__.'/classes/Food.php';
+    require_once __DIR__.'/classes/Toy.php';
+    require_once __DIR__.'/classes/PetBed.php';
 
 
     $CatCategory = new Category('🐈');
@@ -13,6 +16,18 @@
         'https://arcaplanet.vtexassets.com/arquivos/ids/265339/trixie-tiragraffi-livia-rosa-antico-64cm.jpg?v=637726707522570000', 
         29.90, 
         '001', 
+        10, 
+        $CatCategory
+    );
+
+    $CatTreat = new Food(
+        'Cat Treat', 
+        'Composition',
+        '100 gr.',
+        'Description of Cat Treat', 
+        'https://m.media-amazon.com/images/I/81YIVUB2j4L.jpg', 
+        6.90, 
+        '002', 
         10, 
         $CatCategory
     );
@@ -53,7 +68,7 @@
                         Products
                     </h2>
                 </div>
-                <div class="col-3">
+                <div class="col-3 d-flex align-items-stretch">
                     <div class="card">
                         <div class="card-body">
                             <img src="<?php echo $ProductTest->image;?>" class="card-img-top mb-4">
@@ -83,7 +98,39 @@
                             </p>
                         </div>
                     </div>
-                </div> 
+                </div>
+
+                <div class="col-3 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="<?php echo $CatTreat->image;?>" class="card-img-top mb-4">
+                            </img>
+
+                            <h3>
+                                <?php echo $CatTreat->name;?>
+                            </h3>
+
+                            <ul>
+                                <li>
+                                    $ <?php echo $CatTreat->price;?>
+                                </li>
+                                <li>
+                                    Availability: <?php echo $CatTreat->availability;?>
+                                </li>
+                                <li>
+                                   Category: <?php echo $CatTreat->category->name;?>
+                                </li>
+                                <li>
+                                    Sku: <?php echo $CatTreat->sku;?>
+                                </li>
+                            </ul>
+
+                            <p>
+                                Description: <?php echo $CatTreat->description;?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
