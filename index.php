@@ -10,7 +10,7 @@
     $ProductTest = new Product(
         'Product Test', 
         'Description of Product Test', 
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.arcaplanet.it%2Ftrixie-tiragraffi-livia-rosa-antico%2Fp&psig=AOvVaw2AEiA83Rkd6It3S2NIByA5&ust=1708987525587000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNC47uTIx4QDFQAAAAAdAAAAABAH', 
+        'https://arcaplanet.vtexassets.com/arquivos/ids/265339/trixie-tiragraffi-livia-rosa-antico-64cm.jpg?v=637726707522570000', 
         29.90, 
         '001', 
         10, 
@@ -27,6 +27,7 @@
 
     <!-- BOOTSRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -35,7 +36,7 @@
             <div class="row">
                 <div class="col">
                     <h1 class="text-center ">
-                        ARCAPLANET
+                        <img src="https://parcolevante.it/wp-content/uploads/media/negozi/logo/logo-arcaplanet.png" alt="">
                     </h1>
                 </div>
             </div>
@@ -48,14 +49,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Products</h2>
+                    <h2 class="text-center">
+                        Products
+                    </h2>
                 </div>
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <div src="" class="card-image-top">
-                                Immagine
-                            </div>
+                            <img src="<?php echo $ProductTest->image;?>" class="card-img-top mb-4">
+                            </img>
 
                             <h3>
                                 <?php echo $ProductTest->name;?>
